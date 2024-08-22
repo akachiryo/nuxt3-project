@@ -1,3 +1,5 @@
+version: "3"
+
 services:
   front:
     build: .
@@ -9,4 +11,4 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=3000
-    command: yarn dev
+    command: sh -c "rm -rf /app/.nuxt /app/.output /app/.nitro /tmp/nitro && yarn dev"

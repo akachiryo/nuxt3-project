@@ -16,11 +16,7 @@ RUN yarn install
 # ソースコードをコピー
 COPY . .
 
-# アプリケーションをビルド
-RUN yarn build
-
 # ポート3000を開放
 EXPOSE 3000
 
-# アプリケーションを起動
-CMD ["yarn", "start"]
+CMD ["yarn", "dev"]
